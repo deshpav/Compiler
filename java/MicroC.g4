@@ -208,7 +208,71 @@ args_rest returns [List<ExpressionNode> args] : ',' expr args_rest {$args = new 
           | /* empty */ {$args = new LinkedList<ExpressionNode>();};
 
 /* This is left recursive, but ANTLR will clean this up */ 
-expr returns [ExpressionNode node] : term {$node = $term.node;}
+expr returns [ExpressionNode node] : 
+     INT_LITERAL '+' INT_LITERAL 
+          {
+               int left = Integer.parseInt($INT_LITERAL.text);
+               int right = Integer.parseInt($INT_LITERAL.text);
+               int result = left + right;
+               $node = new IntLitNode(Integer.toString(result)); // Replace with the computed result
+          }
+     | INT_LITERAL '-' INT_LITERAL 
+          {
+               int left = Integer.parseInt($INT_LITERAL.text);
+               int right = Integer.parseInt($INT_LITERAL.text);
+               int result = left - right;
+               $node = new IntLitNode(Integer.toString(result)); // Replace with the computed result
+          }
+     | INT_LITERAL '*' INT_LITERAL 
+          {
+               int left = Integer.parseInt($INT_LITERAL.text);
+               int right = Integer.parseInt($INT_LITERAL.text);
+               int result = left * right;
+               $node = new IntLitNode(Integer.toString(result)); // Replace with the computed result
+          }
+     | INT_LITERAL '/' INT_LITERAL 
+          {
+               int left = Integer.parseInt($INT_LITERAL.text);
+               int right = Integer.parseInt($INT_LITERAL.text);
+               if (right != 0) {
+               int result = left / right;
+               $node = new IntLitNode(Integer.toString(result)); // Replace with the computed result
+               } 
+          }
+     | FLOAT_LITERAL '+' FLOAT_LITERAL 
+          {
+          float left = Float.parseFloat($FLOAT_LITERAL.text);
+          float right = Float.parseFloat($FLOAT_LITERAL.text);
+          float result = left + right;
+          $node = new FloatLitNode(Float.toString(result)); // Replace with the computed result
+          }
+     | FLOAT_LITERAL '-' FLOAT_LITERAL 
+          {
+               float left = Float.parseFloat($FLOAT_LITERAL.text);
+               float right = Float.parseFloat($FLOAT_LITERAL.text);
+               float result = left - right;
+               $node = new FloatLitNode(Float.toString(result)); // Replace with the computed result
+          }
+     | FLOAT_LITERAL '*' FLOAT_LITERAL 
+          {
+               float left = Float.parseFloat($FLOAT_LITERAL.text);
+               float right = Float.parseFloat($FLOAT_LITERAL.text);
+               float result = left * right;
+               $node = new FloatLitNode(Float.toString(result)); // Replace with the computed result
+          }
+     | FLOAT_LITERAL '/' FLOAT_LITERAL 
+          {
+               float left = Float.parseFloat($FLOAT_LITERAL.text);
+               float right = Float.parseFloat($FLOAT_LITERAL.text);
+               if (right != 0.0f) {
+               float result = left / right;
+               $node = new FloatLitNode(Float.toString(result)); // Replace with the computed result
+               } else {
+               // Handle division by zero error
+               // You might throw an error or handle it differently based on your requirements
+               }
+          }
+     | term {$node = $term.node;}
      | e1 = expr addop term {$node = new BinaryOpNode($e1.node, $term.node, $addop.text);}; /* FILL IN FROM STEP 2 */
 	 
 /* This is left recursive, but ANTLR will clean this up */
