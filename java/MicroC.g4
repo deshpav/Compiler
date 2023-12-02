@@ -267,10 +267,7 @@ expr returns [ExpressionNode node] :
                if (right != 0.0f) {
                float result = left / right;
                $node = new FloatLitNode(Float.toString(result)); // Replace with the computed result
-               } else {
-               // Handle division by zero error
-               // You might throw an error or handle it differently based on your requirements
-               }
+               } 
           }
      | term {$node = $term.node;}
      | e1 = expr addop term {$node = new BinaryOpNode($e1.node, $term.node, $addop.text);}; /* FILL IN FROM STEP 2 */
