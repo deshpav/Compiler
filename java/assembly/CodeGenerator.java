@@ -21,8 +21,8 @@ public class CodeGenerator extends AbstractASTVisitor<CodeObject> {
 	int elseLabel;
 	int outLabel;
 
-	static public int numIntRegisters = 32;
-	static public int numFloatRegisters = 32;
+	static public int numIntRegisters = 2048;
+	static public int numFloatRegisters = 2048;
 
 	String currFunc;
 	

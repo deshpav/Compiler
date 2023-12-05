@@ -176,7 +176,7 @@ public class RegisterAllocator {
     static LinkedHashMap<String, Tuple> generateHashMap() {
         LinkedHashMap<String, Tuple> hashMap = new LinkedHashMap<String, Tuple>();
 
-        for (int i = 1; i <= 31; i++) {
+        for (int i = 1; i <= 1023; i++) {
             String var = "";
             if (i == 1) {
                 var = "ra";
@@ -192,7 +192,7 @@ public class RegisterAllocator {
             hashMap.put(key, value);
         }
 
-        for (int i = 0; i < 32; i++) {
+        for (int i = 0; i < 1024; i++) {
             String key = "f" + i;
             Tuple value = new Tuple("", false, false);
             hashMap.put(key, value);
