@@ -9,7 +9,7 @@ public abstract class Instruction {
 	/*
 	* list of possible op codess
 	*/
-	enum OpCode {
+	public enum OpCode {
         LI("LI"),
         LA("LA"),
 		ADD("ADD"),
@@ -50,13 +50,7 @@ public abstract class Instruction {
 		FEQ("FEQ.S"),
 		/* FUNCTION CALL AND RETURN */
 		JR("JR"),
-		RET("RET"),
-		/* MALLOC AND FREE */
-		MALLOC("MALLOC"),
-		FREE("FREE"),
-		/* TYPE CONVERSION */
-		IMOVF("IMOVF.S"),
-		FMOVI("FMOVI.S");
+		RET("RET");
 
 
 		private String opCodeName;
@@ -86,5 +80,67 @@ public abstract class Instruction {
 	 */
     public String getDest() {
         return this.dest;
-    }
+	}
+
+	public String getSrc1() {
+		return this.src1;
+	}
+
+	public String getSrc2() {
+		return this.src2;
+	}
+	
+	public void setDest(String dest) {
+        this.dest = dest;
+	}
+
+	public void setSrc1(String src1) {
+		this.src1 = src1;
+	}
+
+	public void setSrc2(String src2) {
+		this.src2 = src2;
+	}
+
+	public enum Operand {
+		SRC1,
+		SRC2,
+		DEST
+	};
+
+	public OpCode getOC() {
+		return oc;
+	}
+
+	public String getOperand(Operand o) {
+		switch (o) {
+			case SRC1: return src1;
+			case SRC2: return src2;
+			case DEST: return dest;
+			default: throw new Error("Shouldn't get here");
+		}
+	}
+
+	public String getLabel() {
+		return label;
+	}
+
+	public boolean is3AC(Operand o) {
+		switch (o) {
+			case SRC1: return is3AC(src1);
+			case SRC2: return is3AC(src2);
+			case DEST: return is3AC(dest);
+			default: throw new Error("Shouldn't get here");
+		}
+	}
+
+	public boolean is3AC(String s) {
+		return ((s != null) && (s.charAt(0) == '$'));
+	}
+
+	public boolean is3AC() {
+		return (is3AC(Operand.SRC1) ||
+				is3AC(Operand.SRC2) ||
+				is3AC(Operand.DEST));
+	}
 }

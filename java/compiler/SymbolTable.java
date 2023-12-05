@@ -30,13 +30,13 @@ public class SymbolTable {
 	}
 	
 	public void addVariable(Scope.Type type, String name, String value) {
-		assert(type.type == Scope.InnerType.STRING);
+		assert(type == Scope.Type.STRING);
 		Scope.ErrorType e = currentScope().addSymbol(type, name, value);
 	    processError(name, e);
 	}
 
 	public void addVariable(Scope.Type type, String name) {
-		assert (type.type != Scope.InnerType.STRING);
+		assert (type != Scope.Type.STRING);
 		Scope.ErrorType e = currentScope().addSymbol(type, name);
 		if (e != Scope.ErrorType.NONE) {
 			System.out.println("Found " + e + " adding " + type + " " + name);
@@ -117,10 +117,10 @@ public class SymbolTable {
 	public static void main(String args[]) {
 		SymbolTable st =  new SymbolTable();
 
-		st.addVariable(new Scope.Type(Scope.InnerType.INT), "x");
-		st.addVariable(new Scope.Type(Scope.InnerType.INT), "y");
-		st.addVariable(new Scope.Type(Scope.InnerType.STRING), "z", "Hello");
-		st.addVariable(new Scope.Type(Scope.InnerType.STRING), "w", "World");
+		st.addVariable(Scope.Type.INT, "x");
+		st.addVariable(Scope.Type.INT, "y");
+		st.addVariable(Scope.Type.STRING, "z", "Hello");
+		st.addVariable(Scope.Type.STRING, "w", "World");
 
 		st.printTable();
 	}

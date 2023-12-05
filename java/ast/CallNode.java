@@ -7,7 +7,7 @@ import java.util.List;
 import ast.visitor.ASTVisitor;
 import compiler.Compiler;
 
-public class CallNode extends AbstractCallNode {
+public class CallNode extends ExpressionNode {
 
     List<ExpressionNode> args;
     String funcName;

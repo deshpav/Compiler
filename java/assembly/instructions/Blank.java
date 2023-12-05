@@ -5,14 +5,20 @@ package assembly.instructions;
  */
 public class Blank extends Instruction {
 
-    public Blank() {
+    String comment;
 
+    public Blank() {
+        comment = "";
+    }
+
+    public Blank(String c) {
+        this.comment = c;
     }
 
     /**
      * @return ""
      */
     public String toString() {
-        return "";
+        return ";" + comment;
     }
 }

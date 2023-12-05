@@ -22,9 +22,5 @@ public interface ASTVisitor<R> {
 	R visit(FunctionNode node);
 	R visit(FunctionListNode node);
 	R visit(CallNode node);
-	R visit(PtrDerefNode node);
-	R visit(AddrOfNode node);
-	R visit(MallocNode node);
-	R visit(FreeNode node);
-	R visit(TypeCastNode node);
+
 }

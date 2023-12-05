@@ -67,7 +67,7 @@ public class Compiler {
 
 		Collection<Scope.SymbolTableEntry> stes = g.getEntries();
 		for (Scope.SymbolTableEntry ste : stes) {
-			if (ste.getType().type == Scope.InnerType.STRING) {
+			if (ste.getType() == Scope.Type.STRING) {
 				Scope.StringSymbolTableEntry sste = (Scope.StringSymbolTableEntry) ste;
 				System.out.println(String.format("0x%x", sste.getAddress()) + " " + sste.getValue());
 			}
