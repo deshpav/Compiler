@@ -1,0 +1,3252 @@
+Commit ID tagged for submission: a4018b004d529f2a52b736987f167f5143484586
+Submission graded at: 2023-12-05 05:41:35
+
+rm -rf classes build
+using Java
+rm -rf build classes
+mkdir build classes
+antlr -o build java/MicroC.g4
+javac -cp /usr/local/share/antlr.jar:/usr/local/share/antlr.jar -d classes java/compiler/*.java java/ast/*.java java/assembly/*.java java/assembly/instructions/*.java java/ast/visitor/*.java build/java/*.java
+Result Temp Dir: /tmp/tmpes1xsz7p
+==== Running test set hidden
+== Running test a0
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+-27
+-50
+39
+-22400
+13
+-9
+-8064
+1
+0
+-50
+Execution time: 252 cycles
+Memory usage: 12 reads, 22 writes; 34 total
+
+Ref Output:
+Initializing machine with 2048 registers
+-27
+-50
+39
+-22400
+13
+-9
+-8064
+1
+0
+-50
+Execution time: 932 cycles
+Memory usage: 154 reads, 154 writes; 308 total
+
+== Test passed 
+=== Grade for Test  1 is  1.00 with S/R as 0.27 ( S: 252, R: 932)
+== Running test a1
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 665 cycles
+Memory usage: 35 reads, 36 writes; 71 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 1674 cycles
+Memory usage: 246 reads, 232 writes; 478 total
+
+== Test passed 
+=== Grade for Test  2 is  1.00 with S/R as 0.40 ( S: 665, R: 1674)
+== Running test a2
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+13
+1603
+-6383
+-25
+-212
+-226
+0
+-275
+-2779
+2843
+-3426
+-5895
+13
+225
+-84
+1466
+-65
+100
+-1714
+0
+568.1384382063617
+-2636.0306013901304
+-114.03969706956332
+100.88413572445381
+1751.3657702610003
+277.98610429832576
+204.20533793250004
+-3720.26607606346
+-132.70797744
+44.63093599999998
+56.569794342121995
+37.86177189125199
+-206.23983774928
+-451.34442902923615
+173.91502699961933
+-174.53349463551334
+-2.0339061719804983
+-1.3762183117100042
+102.95727946326406
+1026.595513317232
+True
+Execution time: 3107 cycles
+Memory usage: 65 reads, 86 writes; 151 total
+
+Ref Output:
+Initializing machine with 2048 registers
+13
+1603
+-6383
+-25
+-212
+-226
+0
+-275
+-2779
+2843
+-3426
+-5895
+13
+225
+-84
+1466
+-65
+100
+-1714
+0
+568.1384382063617
+-2636.0306013901304
+-114.03969706956332
+100.88413572445381
+1751.3657702610003
+277.98610429832576
+204.20533793250004
+-3720.26607606346
+-132.70797744
+44.63093599999998
+56.569794342121995
+37.86177189125199
+-206.23983774928
+-451.34442902923615
+173.91502699961933
+-174.53349463551334
+-2.0339061719804983
+-1.3762183117100042
+102.95727946326406
+1026.595513317232
+True
+Execution time: 10196 cycles
+Memory usage: 1519 reads, 1480 writes; 2999 total
+
+== Test passed 
+=== Grade for Test  3 is  1.00 with S/R as 0.30 ( S: 3107, R: 10196)
+== Running test a3
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+13
+1603
+-6383
+-25
+-212
+-226
+0
+-275
+-2779
+2843
+-3426
+-5895
+13
+225
+-84
+1466
+-65
+100
+-1714
+0
+568.1384382063617
+-2636.0306013901304
+-114.03969706956332
+100.88413572445381
+1751.3657702610003
+277.98610429832576
+204.20533793250004
+-3720.26607606346
+-132.70797744
+44.63093599999998
+56.569794342121995
+37.86177189125199
+-206.23983774928
+-451.34442902923615
+173.91502699961933
+-174.53349463551334
+-2.0339061719804983
+-1.3762183117100042
+102.95727946326406
+1026.595513317232
+True
+Execution time: 30047 cycles
+Memory usage: 129 reads, 499 writes; 628 total
+
+Ref Output:
+Initializing machine with 2048 registers
+13
+1603
+-6383
+-25
+-212
+-226
+0
+-275
+-2779
+2843
+-3426
+-5895
+13
+225
+-84
+1466
+-65
+100
+-1714
+0
+568.1384382063617
+-2636.0306013901304
+-114.03969706956332
+100.88413572445381
+1751.3657702610003
+277.98610429832576
+204.20533793250004
+-3720.26607606346
+-132.70797744
+44.63093599999998
+56.569794342121995
+37.86177189125199
+-206.23983774928
+-451.34442902923615
+173.91502699961933
+-174.53349463551334
+-2.0339061719804983
+-1.3762183117100042
+102.95727946326406
+1026.595513317232
+True
+Execution time: 37086 cycles
+Memory usage: 1549 reads, 1899 writes; 3448 total
+
+== Test passed 
+=== Grade for Test  4 is  0.90 with S/R as 0.81 ( S: 30047, R: 37086)
+== Running test a4
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+13
+1603
+-6383
+-25
+-212
+-226
+0
+-275
+-2779
+2843
+-3426
+-5895
+13
+225
+-84
+1466
+-65
+100
+-1714
+0
+568.1384382063617
+-2636.0306013901304
+-114.03969706956332
+100.88413572445381
+1751.3657702610003
+277.98610429832576
+204.20533793250004
+-3720.26607606346
+-132.70797744
+44.63093599999998
+56.569794342121995
+37.86177189125199
+-206.23983774928
+-451.34442902923615
+173.91502699961933
+-174.53349463551334
+-2.0339061719804983
+-1.3762183117100042
+102.95727946326406
+1026.595513317232
+True
+Execution time: 73295 cycles
+Memory usage: 197 reads, 1179 writes; 1376 total
+
+Ref Output:
+Initializing machine with 2048 registers
+13
+1603
+-6383
+-25
+-212
+-226
+0
+-275
+-2779
+2843
+-3426
+-5895
+13
+225
+-84
+1466
+-65
+100
+-1714
+0
+568.1384382063617
+-2636.0306013901304
+-114.03969706956332
+100.88413572445381
+1751.3657702610003
+277.98610429832576
+204.20533793250004
+-3720.26607606346
+-132.70797744
+44.63093599999998
+56.569794342121995
+37.86177189125199
+-206.23983774928
+-451.34442902923615
+173.91502699961933
+-174.53349463551334
+-2.0339061719804983
+-1.3762183117100042
+102.95727946326406
+1026.595513317232
+True
+Execution time: 80414 cycles
+Memory usage: 1633 reads, 2595 writes; 4228 total
+
+== Test passed 
+=== Grade for Test  5 is  0.74 with S/R as 0.91 ( S: 73295, R: 80414)
+== Running test a5
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+-120
+9312
+-752
+1286
+74
+-263
+-109
+26
+3511
+-3863
+42
+-1252
+-58
+-5947
+0
+1
+1331
+-2325
+-345
+552
+True
+Execution time: 29119 cycles
+Memory usage: 196 reads, 500 writes; 696 total
+
+Ref Output:
+Initializing machine with 2048 registers
+-120
+9312
+-752
+1286
+74
+-263
+-109
+26
+3511
+-3863
+42
+-1252
+-58
+-5947
+0
+1
+1331
+-2325
+-345
+552
+True
+Execution time: 36148 cycles
+Memory usage: 1602 reads, 1906 writes; 3508 total
+
+== Test passed 
+=== Grade for Test  6 is  0.91 with S/R as 0.81 ( S: 29119, R: 36148)
+== Running test b0
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+6567120909414
+836972992783733705
+-148173
+-105072919562016
+1092265658069639345490685
+-92718812723703475233015857261076065403346861169721319073922049878887439067108561932367651626321501770951325033698473309446362600731516527424678407663457375064519028400968389224924956395853
+2163907450826859345864990184355753564221742185347840049851845004362590450453505293500
+19660839378987910717077264
+19660781845253508218831830
+-59821898668840498470068151388213308931700706811170141066198385649540351759705052914328270125894362321464465849165149473897445651286
+Execution time: 873 cycles
+Memory usage: 13 reads, 25 writes; 38 total
+
+Ref Output:
+Initializing machine with 2048 registers
+6567120909414
+836972992783733705
+-148173
+-105072919562016
+1092265658069639345490685
+-92718812723703475233015857261076065403346861169721319073922049878887439067108561932367651626321501770951325033698473309446362600731516527424678407663457375064519028400968389224924956395853
+2163907450826859345864990184355753564221742185347840049851845004362590450453505293500
+19660839378987910717077264
+19660781845253508218831830
+-59821898668840498470068151388213308931700706811170141066198385649540351759705052914328270125894362321464465849165149473897445651286
+Execution time: 4287 cycles
+Memory usage: 743 reads, 683 writes; 1426 total
+
+== Test passed 
+=== Grade for Test  7 is  1.00 with S/R as 0.20 ( S: 873, R: 4287)
+== Running test b1
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+Execution time: 1805 cycles
+Memory usage: 15 reads, 28 writes; 43 total
+
+Ref Output:
+Initializing machine with 2048 registers
+False
+Execution time: 5405 cycles
+Memory usage: 775 reads, 714 writes; 1489 total
+
+== Running test b2
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+-243952
+-180940279243222
+289
+428293
+315
+Execution time: 1761 cycles
+Memory usage: 22 reads, 42 writes; 64 total
+
+Ref Output:
+Initializing machine with 2048 registers
+-243952
+-60884995956093338338853302432
+6012867744
+6926823736453
+315
+Execution time: 5781 cycles
+Memory usage: 865 reads, 828 writes; 1693 total
+
+== Running test b3
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+-133338001
+-133373207
+-133331724
+-133319169
+17592
+Execution time: 5551 cycles
+Memory usage: 49 reads, 99 writes; 148 total
+
+Ref Output:
+Initializing machine with 2048 registers
+-133338001
+-133373207
+-133331724
+-133319169
+17592
+Execution time: 10456 cycles
+Memory usage: 1171 reads, 1032 writes; 2203 total
+
+== Test passed 
+=== Grade for Test 10 is  1.00 with S/R as 0.53 ( S: 5551, R: 10456)
+== Running test b4
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+-60532284651866290161188933111353524508234896923680440573763273158822349917018604
+-10612988832
+70004954927833704831272299637339526004959605019992386626066719406753972485120
+-201434
+-500035392341669320223373568838139471463997178714231333043333710037629671760
+False
+Execution time: 10088 cycles
+Memory usage: 272 reads, 297 writes; 569 total
+
+Ref Output:
+Initializing machine with 2048 registers
+-60532284651866290161188933111353524508234896923680440573763273158822349917018604
+-10612988832
+70004954927833704831272299637339526004959605019992386626066719406753972485120
+-201434
+-500035392341669320223373568838139471463997178714231333043333710037629671760
+False
+Execution time: 12765 cycles
+Memory usage: 921 reads, 757 writes; 1678 total
+
+== Test passed 
+=== Grade for Test 11 is  0.94 with S/R as 0.79 ( S: 10088, R: 12765)
+== Running test c0
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+20
+2459
+454
+-3319
+-2434
+-25
+-17
+17
+2544
+74
+Execution time: 1378 cycles
+Memory usage: 30 reads, 49 writes; 79 total
+
+Ref Output:
+Initializing machine with 2048 registers
+20
+2459
+454
+-3319
+-2434
+-25
+-17
+17
+2544
+74
+Execution time: 2983 cycles
+Memory usage: 351 reads, 370 writes; 721 total
+
+== Test passed 
+=== Grade for Test 12 is  1.00 with S/R as 0.46 ( S: 1378, R: 2983)
+== Running test c1
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 5935 cycles
+Memory usage: 73 reads, 91 writes; 164 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 9639 cycles
+Memory usage: 814 reads, 832 writes; 1646 total
+
+== Test passed 
+=== Grade for Test 13 is  1.00 with S/R as 0.62 ( S: 5935, R: 9639)
+== Running test c2
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+-151
+-6
+1740
+2978
+5325
+-230
+6305
+203
+77
+-4688
+-2726
+1876
+-3060
+2688
+0
+-2042
+-462
+654
+-9707
+-9258
+10
+7015
+-735
+-44
+90
+7730
+-511
+-1552
+-8
+9000
+True
+Execution time: 10616 cycles
+Memory usage: 133 reads, 211 writes; 344 total
+
+Ref Output:
+Initializing machine with 2048 registers
+-151
+-6
+1740
+2978
+5325
+-230
+6305
+203
+77
+-4688
+-2726
+1876
+-3060
+2688
+0
+-2042
+-462
+654
+-9707
+-9258
+10
+7015
+-735
+-44
+90
+7730
+-511
+-1552
+-8
+9000
+True
+Execution time: 19600 cycles
+Memory usage: 1930 reads, 2008 writes; 3938 total
+
+== Test passed 
+=== Grade for Test 14 is  1.00 with S/R as 0.54 ( S: 10616, R: 19600)
+== Running test c3
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+20
+2459
+454
+-3319
+-2434
+-25
+-17
+17
+2544
+74
+Execution time: 7997 cycles
+Memory usage: 114 reads, 241 writes; 355 total
+
+Ref Output:
+Initializing machine with 2048 registers
+20
+2459
+454
+-3319
+-2434
+-25
+-17
+17
+2544
+74
+Execution time: 9667 cycles
+Memory usage: 448 reads, 575 writes; 1023 total
+
+== Test passed 
+=== Grade for Test 15 is  0.88 with S/R as 0.83 ( S: 7997, R: 9667)
+== Running test c4
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 24460 cycles
+Memory usage: 157 reads, 325 writes; 482 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 28229 cycles
+Memory usage: 911 reads, 1079 writes; 1990 total
+
+== Test passed 
+=== Grade for Test 16 is  0.81 with S/R as 0.87 ( S: 24460, R: 28229)
+== Running test c5
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+-151
+-6
+1740
+2978
+5325
+-230
+6305
+203
+77
+-4688
+-2726
+1876
+-3060
+2688
+0
+-2042
+-462
+654
+-9707
+-9258
+10
+7015
+-735
+-44
+90
+7730
+-511
+-1552
+-8
+9000
+True
+Execution time: 40098 cycles
+Memory usage: 216 reads, 690 writes; 906 total
+
+Ref Output:
+Initializing machine with 2048 registers
+-151
+-6
+1740
+2978
+5325
+-230
+6305
+203
+77
+-4688
+-2726
+1876
+-3060
+2688
+0
+-2042
+-462
+654
+-9707
+-9258
+10
+7015
+-735
+-44
+90
+7730
+-511
+-1552
+-8
+9000
+True
+Execution time: 49152 cycles
+Memory usage: 2027 reads, 2501 writes; 4528 total
+
+== Test passed 
+=== Grade for Test 17 is  0.89 with S/R as 0.82 ( S: 40098, R: 49152)
+== Running test c10
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+20
+2459
+454
+-3319
+-2434
+-25
+-17
+17
+2544
+74
+Execution time: 1373 cycles
+Memory usage: 30 reads, 49 writes; 79 total
+
+Ref Output:
+Initializing machine with 2048 registers
+20
+2459
+454
+-3319
+-2434
+-25
+-17
+17
+2544
+74
+Execution time: 2968 cycles
+Memory usage: 349 reads, 368 writes; 717 total
+
+== Test passed 
+=== Grade for Test 18 is  1.00 with S/R as 0.46 ( S: 1373, R: 2968)
+== Running test c11
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 5930 cycles
+Memory usage: 73 reads, 91 writes; 164 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 9624 cycles
+Memory usage: 812 reads, 830 writes; 1642 total
+
+== Test passed 
+=== Grade for Test 19 is  1.00 with S/R as 0.62 ( S: 5930, R: 9624)
+== Running test c12
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+-151
+-6
+1740
+2978
+5325
+-230
+6305
+203
+77
+-4688
+-2726
+1876
+-3060
+2688
+0
+-2042
+-462
+654
+-9707
+-9258
+10
+7015
+-735
+-44
+90
+7730
+-511
+-1552
+-8
+9000
+True
+Execution time: 10621 cycles
+Memory usage: 133 reads, 211 writes; 344 total
+
+Ref Output:
+Initializing machine with 2048 registers
+-151
+-6
+1740
+2978
+5325
+-230
+6305
+203
+77
+-4688
+-2726
+1876
+-3060
+2688
+0
+-2042
+-462
+654
+-9707
+-9258
+10
+7015
+-735
+-44
+90
+7730
+-511
+-1552
+-8
+9000
+True
+Execution time: 19615 cycles
+Memory usage: 1932 reads, 2010 writes; 3942 total
+
+== Test passed 
+=== Grade for Test 20 is  1.00 with S/R as 0.54 ( S: 10621, R: 19615)
+== Running test c13
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+20
+2459
+454
+-3319
+-2434
+-25
+-17
+17
+2544
+74
+Execution time: 4919 cycles
+Memory usage: 114 reads, 169 writes; 283 total
+
+Ref Output:
+Initializing machine with 2048 registers
+20
+2459
+454
+-3319
+-2434
+-25
+-17
+17
+2544
+74
+Execution time: 6589 cycles
+Memory usage: 448 reads, 503 writes; 951 total
+
+== Test passed 
+=== Grade for Test 21 is  1.00 with S/R as 0.75 ( S: 4919, R: 6589)
+== Running test c14
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 24988 cycles
+Memory usage: 157 reads, 331 writes; 488 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 28757 cycles
+Memory usage: 911 reads, 1085 writes; 1996 total
+
+== Test passed 
+=== Grade for Test 22 is  0.81 with S/R as 0.87 ( S: 24988, R: 28757)
+== Running test c15
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+-151
+-6
+1740
+2978
+5325
+-230
+6305
+203
+77
+-4688
+-2726
+1876
+-3060
+2688
+0
+-2042
+-462
+654
+-9707
+-9258
+10
+7015
+-735
+-44
+90
+7730
+-511
+-1552
+-8
+9000
+True
+Execution time: 39095 cycles
+Memory usage: 216 reads, 666 writes; 882 total
+
+Ref Output:
+Initializing machine with 2048 registers
+-151
+-6
+1740
+2978
+5325
+-230
+6305
+203
+77
+-4688
+-2726
+1876
+-3060
+2688
+0
+-2042
+-462
+654
+-9707
+-9258
+10
+7015
+-735
+-44
+90
+7730
+-511
+-1552
+-8
+9000
+True
+Execution time: 48159 cycles
+Memory usage: 2029 reads, 2479 writes; 4508 total
+
+== Test passed 
+=== Grade for Test 23 is  0.90 with S/R as 0.81 ( S: 39095, R: 48159)
+== Running test c2a10
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+20
+-2416
+23985
+-3319
+-2434
+-25
+-1600
+-252262
+87905
+74
+Execution time: 1607 cycles
+Memory usage: 35 reads, 69 writes; 104 total
+
+Ref Output:
+Initializing machine with 2048 registers
+20
+-2416
+23985
+-3319
+-2434
+-25
+-1600
+-252262
+87905
+74
+Execution time: 3535 cycles
+Memory usage: 444 reads, 439 writes; 883 total
+
+== Test passed 
+=== Grade for Test 24 is  1.00 with S/R as 0.45 ( S: 1607, R: 3535)
+== Running test c2a11
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 3252 cycles
+Memory usage: 47 reads, 70 writes; 117 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 5374 cycles
+Memory usage: 504 reads, 473 writes; 977 total
+
+== Test passed 
+=== Grade for Test 25 is  1.00 with S/R as 0.61 ( S: 3252, R: 5374)
+== Running test c2a12
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+20
+-118584480
+-2664
+-17
+-2434
+True
+Execution time: 2381 cycles
+Memory usage: 42 reads, 70 writes; 112 total
+
+Ref Output:
+Initializing machine with 2048 registers
+20
+-118584480
+-2664
+-17
+-2434
+True
+Execution time: 4407 cycles
+Memory usage: 469 reads, 461 writes; 930 total
+
+== Test passed 
+=== Grade for Test 26 is  1.00 with S/R as 0.54 ( S: 2381, R: 4407)
+== Running test c2a13
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+20
+-48
+-63271
+-3319
+-2434
+-25
+19251
+-65540
+6158020
+74
+Execution time: 8638 cycles
+Memory usage: 288 reads, 313 writes; 601 total
+
+Ref Output:
+Initializing machine with 2048 registers
+20
+-48
+-63271
+-3319
+-2434
+-25
+19251
+-65540
+6158020
+74
+Execution time: 10822 cycles
+Memory usage: 795 reads, 703 writes; 1498 total
+
+== Test passed 
+=== Grade for Test 27 is  0.92 with S/R as 0.80 ( S: 8638, R: 10822)
+== Running test c2a14
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 17271 cycles
+Memory usage: 245 reads, 331 writes; 576 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 19623 cycles
+Memory usage: 802 reads, 744 writes; 1546 total
+
+== Test passed 
+=== Grade for Test 28 is  0.79 with S/R as 0.88 ( S: 17271, R: 19623)
+== Running test c2a15
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1254
+31221
+1529
+-26831
+9269
+-15544
+4471
+107308
+138
+-9258
+True
+Execution time: 40630 cycles
+Memory usage: 335 reads, 701 writes; 1036 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1254
+31221
+1529
+-26831
+9269
+-15544
+4471
+107308
+138
+-9258
+True
+Execution time: 46021 cycles
+Memory usage: 1462 reads, 1747 writes; 3209 total
+
+== Test passed 
+=== Grade for Test 29 is  0.79 with S/R as 0.88 ( S: 40630, R: 46021)
+== Running test c2a0
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+20
+-2416
+36695
+-3319
+-2434
+-25
+10892958
+1
+6637
+74
+Execution time: 1583 cycles
+Memory usage: 35 reads, 69 writes; 104 total
+
+Ref Output:
+Initializing machine with 2048 registers
+20
+-2416
+36695
+-3319
+-2434
+-25
+10892958
+1
+6637
+74
+Execution time: 3474 cycles
+Memory usage: 433 reads, 434 writes; 867 total
+
+== Test passed 
+=== Grade for Test 30 is  1.00 with S/R as 0.46 ( S: 1583, R: 3474)
+== Running test c2a1
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 3243 cycles
+Memory usage: 47 reads, 70 writes; 117 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 5323 cycles
+Memory usage: 483 reads, 473 writes; 956 total
+
+== Test passed 
+=== Grade for Test 31 is  1.00 with S/R as 0.61 ( S: 3243, R: 5323)
+== Running test c2a2
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1254
+1677
+1529
+-11614548
+-15
+-4810
+4471
+-34
+138
+-9258
+True
+Execution time: 6907 cycles
+Memory usage: 90 reads, 162 writes; 252 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1254
+1677
+1529
+-11614548
+-15
+-4810
+4471
+-34
+138
+-9258
+True
+Execution time: 12216 cycles
+Memory usage: 1206 reads, 1188 writes; 2394 total
+
+== Test passed 
+=== Grade for Test 32 is  1.00 with S/R as 0.57 ( S: 6907, R: 12216)
+== Running test c2a3
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+20
+-48
+-43147
+-3319
+-2434
+-25
+2513
+-68562
+-30321
+74
+Execution time: 8805 cycles
+Memory usage: 280 reads, 314 writes; 594 total
+
+Ref Output:
+Initializing machine with 2048 registers
+20
+-48
+-43147
+-3319
+-2434
+-25
+2513
+-68562
+-30321
+74
+Execution time: 10896 cycles
+Memory usage: 736 reads, 707 writes; 1443 total
+
+== Test passed 
+=== Grade for Test 33 is  0.91 with S/R as 0.81 ( S: 8805, R: 10896)
+== Running test c2a4
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 17528 cycles
+Memory usage: 282 reads, 332 writes; 614 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 19733 cycles
+Memory usage: 761 reads, 748 writes; 1509 total
+
+== Test passed 
+=== Grade for Test 34 is  0.78 with S/R as 0.89 ( S: 17528, R: 19733)
+== Running test c2a5
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1254
+7566
+1529
+154
+392868
+-2743
+4471
+107308
+138
+-9258
+True
+Execution time: 40886 cycles
+Memory usage: 329 reads, 701 writes; 1030 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1254
+7566
+1529
+154
+392868
+-2743
+4471
+107308
+138
+-9258
+True
+Execution time: 46340 cycles
+Memory usage: 1474 reads, 1756 writes; 3230 total
+
+== Test passed 
+=== Grade for Test 35 is  0.79 with S/R as 0.88 ( S: 40886, R: 46340)
+== Running test c2b10
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+20
+-2416
+-31558
+-3319
+-2434
+-25
+26
+4830
+-9
+74
+Execution time: 628 cycles
+Memory usage: 34 reads, 38 writes; 72 total
+
+Ref Output:
+Initializing machine with 2048 registers
+20
+-2416
+-31558
+-3319
+-2434
+-25
+26
+4830
+-9
+74
+Execution time: 2529 cycles
+Memory usage: 422 reads, 413 writes; 835 total
+
+== Test passed 
+=== Grade for Test 36 is  1.00 with S/R as 0.25 ( S: 628, R: 2529)
+== Running test c2b11
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 1258 cycles
+Memory usage: 47 reads, 40 writes; 87 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 3297 cycles
+Memory usage: 464 reads, 442 writes; 906 total
+
+== Test passed 
+=== Grade for Test 37 is  1.00 with S/R as 0.38 ( S: 1258, R: 3297)
+== Running test c2b12
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1254
+-71877
+1529
+271000
+10918
+2789
+4471
+-34
+138
+-9258
+True
+Execution time: 2603 cycles
+Memory usage: 89 reads, 85 writes; 174 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1254
+-71877
+1529
+271000
+10918
+2789
+4471
+-34
+138
+-9258
+True
+Execution time: 7811 cycles
+Memory usage: 1150 reads, 1114 writes; 2264 total
+
+== Test passed 
+=== Grade for Test 38 is  1.00 with S/R as 0.33 ( S: 2603, R: 7811)
+== Running test c2b13
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+20
+-48
+32778
+-3319
+-2434
+-25
+80
+69690
+-127775
+74
+Execution time: 1179 cycles
+Memory usage: 120 reads, 88 writes; 208 total
+
+Ref Output:
+Initializing machine with 2048 registers
+20
+-48
+32778
+-3319
+-2434
+-25
+80
+69690
+-127775
+74
+Execution time: 3165 cycles
+Memory usage: 522 reads, 482 writes; 1004 total
+
+== Test passed 
+=== Grade for Test 39 is  1.00 with S/R as 0.37 ( S: 1179, R: 3165)
+== Running test c2b14
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 1731 cycles
+Memory usage: 131 reads, 88 writes; 219 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 3833 cycles
+Memory usage: 560 reads, 503 writes; 1063 total
+
+== Test passed 
+=== Grade for Test 40 is  1.00 with S/R as 0.45 ( S: 1731, R: 3833)
+== Running test c2b15
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1254
+46434234
+1529
+-3843906
+831012
+185151
+4471
+107308
+138
+-9258
+True
+Execution time: 3103 cycles
+Memory usage: 173 reads, 133 writes; 306 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1254
+46434234
+1529
+-3843906
+831012
+185151
+4471
+107308
+138
+-9258
+True
+Execution time: 8368 cycles
+Memory usage: 1243 reads, 1175 writes; 2418 total
+
+== Test passed 
+=== Grade for Test 41 is  1.00 with S/R as 0.37 ( S: 3103, R: 8368)
+== Running test c2c10
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+20
+-2416
+-30040
+-3319
+-2434
+-25
+2170665540
+-100685
+-1964839
+74
+Execution time: 1619 cycles
+Memory usage: 35 reads, 69 writes; 104 total
+
+Ref Output:
+Initializing machine with 2048 registers
+20
+-2416
+-30040
+-3319
+-2434
+-25
+2170665540
+-100685
+-1964839
+74
+Execution time: 3568 cycles
+Memory usage: 450 reads, 442 writes; 892 total
+
+== Test passed 
+=== Grade for Test 42 is  1.00 with S/R as 0.45 ( S: 1619, R: 3568)
+== Running test c2c11
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 3229 cycles
+Memory usage: 47 reads, 70 writes; 117 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 5325 cycles
+Memory usage: 497 reads, 469 writes; 966 total
+
+== Test passed 
+=== Grade for Test 43 is  1.00 with S/R as 0.61 ( S: 3229, R: 5325)
+== Running test c2c12
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1254
+-2251
+1529
+1543
+-38337
+1762444
+4471
+-34
+138
+-9258
+True
+Execution time: 6897 cycles
+Memory usage: 90 reads, 162 writes; 252 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1254
+-2251
+1529
+1543
+-38337
+1762444
+4471
+-34
+138
+-9258
+True
+Execution time: 12207 cycles
+Memory usage: 1208 reads, 1187 writes; 2395 total
+
+== Test passed 
+=== Grade for Test 44 is  1.00 with S/R as 0.57 ( S: 6897, R: 12207)
+== Running test c2c13
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+20
+-48
+-21152
+-3319
+-2434
+-25
+-4843
+96817
+-3145
+74
+Execution time: 8601 cycles
+Memory usage: 205 reads, 311 writes; 516 total
+
+Ref Output:
+Initializing machine with 2048 registers
+20
+-48
+-21152
+-3319
+-2434
+-25
+-4843
+96817
+-3145
+74
+Execution time: 10733 cycles
+Memory usage: 680 reads, 705 writes; 1385 total
+
+== Test passed 
+=== Grade for Test 45 is  0.92 with S/R as 0.80 ( S: 8601, R: 10733)
+== Running test c2c14
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 17622 cycles
+Memory usage: 281 reads, 331 writes; 612 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 20068 cycles
+Memory usage: 873 reads, 752 writes; 1625 total
+
+== Test passed 
+=== Grade for Test 46 is  0.80 with S/R as 0.88 ( S: 17622, R: 20068)
+== Running test c2c15
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1254
+-680565
+1529
+-54
+12393618
+-125
+4471
+107308
+138
+-9258
+True
+Execution time: 40732 cycles
+Memory usage: 338 reads, 701 writes; 1039 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1254
+-680565
+1529
+-54
+12393618
+-125
+4471
+107308
+138
+-9258
+True
+Execution time: 46191 cycles
+Memory usage: 1493 reads, 1751 writes; 3244 total
+
+== Test passed 
+=== Grade for Test 47 is  0.79 with S/R as 0.88 ( S: 40732, R: 46191)
+== Running test c2cb10
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+20
+-2416
+-64260
+-3319
+-2434
+-25
+1265606
+60928
+228510
+74
+Execution time: 1613 cycles
+Memory usage: 35 reads, 69 writes; 104 total
+
+Ref Output:
+Initializing machine with 2048 registers
+20
+-2416
+-64260
+-3319
+-2434
+-25
+1265606
+60928
+228510
+74
+Execution time: 3568 cycles
+Memory usage: 453 reads, 442 writes; 895 total
+
+== Test passed 
+=== Grade for Test 48 is  1.00 with S/R as 0.45 ( S: 1613, R: 3568)
+== Running test c2cb11
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 3208 cycles
+Memory usage: 47 reads, 70 writes; 117 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 5255 cycles
+Memory usage: 480 reads, 464 writes; 944 total
+
+== Test passed 
+=== Grade for Test 49 is  1.00 with S/R as 0.61 ( S: 3208, R: 5255)
+== Running test c2cb12
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1254
+224966
+1529
+33488
+-157355
+-25127
+4471
+-34
+138
+-9258
+True
+Execution time: 6912 cycles
+Memory usage: 90 reads, 162 writes; 252 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1254
+224966
+1529
+33488
+-157355
+-25127
+4471
+-34
+138
+-9258
+True
+Execution time: 12217 cycles
+Memory usage: 1207 reads, 1186 writes; 2393 total
+
+== Test passed 
+=== Grade for Test 50 is  1.00 with S/R as 0.57 ( S: 6912, R: 12217)
+== Running test c2cb13
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+20
+-48
+-2960
+-3319
+-2434
+-25
+-46221
+91401568
+-4496
+74
+Execution time: 8908 cycles
+Memory usage: 261 reads, 313 writes; 574 total
+
+Ref Output:
+Initializing machine with 2048 registers
+20
+-48
+-2960
+-3319
+-2434
+-25
+-46221
+91401568
+-4496
+74
+Execution time: 10981 cycles
+Memory usage: 708 reads, 706 writes; 1414 total
+
+== Test passed 
+=== Grade for Test 51 is  0.90 with S/R as 0.81 ( S: 8908, R: 10981)
+== Running test c2cb14
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 17591 cycles
+Memory usage: 300 reads, 332 writes; 632 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 19994 cycles
+Memory usage: 878 reads, 748 writes; 1626 total
+
+== Test passed 
+=== Grade for Test 52 is  0.79 with S/R as 0.88 ( S: 17591, R: 19994)
+== Running test c2cb15
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1254
+954536832
+1529
+-372438
+-235
+8596
+4471
+107308
+138
+-9258
+True
+Execution time: 40433 cycles
+Memory usage: 380 reads, 701 writes; 1081 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1254
+954536832
+1529
+-372438
+-235
+8596
+4471
+107308
+138
+-9258
+True
+Execution time: 45906 cycles
+Memory usage: 1554 reads, 1743 writes; 3297 total
+
+== Test passed 
+=== Grade for Test 53 is  0.79 with S/R as 0.88 ( S: 40433, R: 45906)
+== Running test c3b10
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+19
+-15897371
+-165262
+-412353360
+-110
+-9707
+1693
+75490380
+-4752720
+-15737788
+-9276
+5706
+275
+-1013
+14304
+-1083039109
+-35
+161
+575
+-12709586
+77
+-1138
+-1230
+7678668
+-6915672
+Execution time: 8225 cycles
+Memory usage: 110 reads, 309 writes; 419 total
+
+Ref Output:
+Initializing machine with 2048 registers
+19
+-15897371
+-165262
+-412353360
+-110
+-9707
+1693
+75490380
+-4752720
+-15737788
+-9276
+5706
+275
+-1013
+14304
+-1083039109
+-35
+161
+575
+-12709586
+77
+-1138
+-1230
+7678668
+-6915672
+Execution time: 18049 cycles
+Memory usage: 2208 reads, 2185 writes; 4393 total
+
+== Test passed 
+=== Grade for Test 54 is  1.00 with S/R as 0.46 ( S: 8225, R: 18049)
+== Running test c3b11
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 8370 cycles
+Memory usage: 74 reads, 162 writes; 236 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 13693 cycles
+Memory usage: 1218 reads, 1174 writes; 2392 total
+
+== Test passed 
+=== Grade for Test 55 is  1.00 with S/R as 0.61 ( S: 8370, R: 13693)
+== Running test c3b12
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1740
+-122
+110604
+88897
+77
+-2726
+-3060
+2481568
+-1268011910280960
+33178
+-9707
+8052
+-262332
+1843
+-288330963782
+True
+Execution time: 12461 cycles
+Memory usage: 122 reads, 310 writes; 432 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1740
+-122
+110604
+88897
+77
+-2726
+-3060
+2481568
+-1268011910280960
+33178
+-9707
+8052
+-262332
+1843
+-288330963782
+True
+Execution time: 22349 cycles
+Memory usage: 2197 reads, 2223 writes; 4420 total
+
+== Test passed 
+=== Grade for Test 56 is  1.00 with S/R as 0.56 ( S: 12461, R: 22349)
+== Running test c3b13
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+-3060
+1820
+508
+-3077
+-2425193820
+2771
+-259
+582
+117
+-572
+0
+-8
+Execution time: 4273 cycles
+Memory usage: 60 reads, 161 writes; 221 total
+
+Ref Output:
+Initializing machine with 2048 registers
+-3060
+1820
+508
+-3077
+-2425193820
+2771
+-259
+582
+117
+-572
+0
+-8
+Execution time: 9470 cycles
+Memory usage: 1175 reads, 1150 writes; 2325 total
+
+== Test passed 
+=== Grade for Test 57 is  1.00 with S/R as 0.45 ( S: 4273, R: 9470)
+== Running test c3b14
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 8370 cycles
+Memory usage: 74 reads, 162 writes; 236 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 13693 cycles
+Memory usage: 1218 reads, 1174 writes; 2392 total
+
+== Test passed 
+=== Grade for Test 58 is  1.00 with S/R as 0.61 ( S: 8370, R: 13693)
+== Running test c3b15
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1740
+-122
+110604
+88897
+77
+-2726
+-3060
+2481568
+-1268011910280960
+33178
+-9707
+8052
+-262332
+1843
+-288330963782
+True
+Execution time: 12461 cycles
+Memory usage: 122 reads, 310 writes; 432 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1740
+-122
+110604
+88897
+77
+-2726
+-3060
+2481568
+-1268011910280960
+33178
+-9707
+8052
+-262332
+1843
+-288330963782
+True
+Execution time: 22349 cycles
+Memory usage: 2197 reads, 2223 writes; 4420 total
+
+== Test passed 
+=== Grade for Test 59 is  1.00 with S/R as 0.56 ( S: 12461, R: 22349)
+== Running test c3b20
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+-3060
+1820
+508
+-3077
+-2425193820
+2771
+-259
+582
+117
+-572
+0
+-8
+Execution time: 4273 cycles
+Memory usage: 60 reads, 161 writes; 221 total
+
+Ref Output:
+Initializing machine with 2048 registers
+-3060
+1820
+508
+-3077
+-2425193820
+2771
+-259
+582
+117
+-572
+0
+-8
+Execution time: 9470 cycles
+Memory usage: 1175 reads, 1150 writes; 2325 total
+
+== Test passed 
+=== Grade for Test 60 is  1.00 with S/R as 0.45 ( S: 4273, R: 9470)
+== Running test c3b21
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 8370 cycles
+Memory usage: 74 reads, 162 writes; 236 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 13693 cycles
+Memory usage: 1218 reads, 1174 writes; 2392 total
+
+== Test passed 
+=== Grade for Test 61 is  1.00 with S/R as 0.61 ( S: 8370, R: 13693)
+== Running test c3b22
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1740
+-122
+110604
+88897
+77
+-2726
+-3060
+2481568
+-1268011910280960
+33178
+-9707
+8052
+-262332
+1843
+-288330963782
+True
+Execution time: 12461 cycles
+Memory usage: 122 reads, 310 writes; 432 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1740
+-122
+110604
+88897
+77
+-2726
+-3060
+2481568
+-1268011910280960
+33178
+-9707
+8052
+-262332
+1843
+-288330963782
+True
+Execution time: 22349 cycles
+Memory usage: 2197 reads, 2223 writes; 4420 total
+
+== Test passed 
+=== Grade for Test 62 is  1.00 with S/R as 0.56 ( S: 12461, R: 22349)
+== Running test c3b23
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+-3060
+1820
+508
+-3077
+-2425193820
+2771
+-259
+582
+117
+-572
+0
+-8
+Execution time: 4273 cycles
+Memory usage: 60 reads, 161 writes; 221 total
+
+Ref Output:
+Initializing machine with 2048 registers
+-3060
+1820
+508
+-3077
+-2425193820
+2771
+-259
+582
+117
+-572
+0
+-8
+Execution time: 9470 cycles
+Memory usage: 1175 reads, 1150 writes; 2325 total
+
+== Test passed 
+=== Grade for Test 63 is  1.00 with S/R as 0.45 ( S: 4273, R: 9470)
+== Running test c3b24
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 8370 cycles
+Memory usage: 74 reads, 162 writes; 236 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 13693 cycles
+Memory usage: 1218 reads, 1174 writes; 2392 total
+
+== Test passed 
+=== Grade for Test 64 is  1.00 with S/R as 0.61 ( S: 8370, R: 13693)
+== Running test c3b25
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1740
+-122
+110604
+88897
+77
+-2726
+-3060
+2481568
+-1268011910280960
+33178
+-9707
+8052
+-262332
+1843
+-288330963782
+True
+Execution time: 12461 cycles
+Memory usage: 122 reads, 310 writes; 432 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1740
+-122
+110604
+88897
+77
+-2726
+-3060
+2481568
+-1268011910280960
+33178
+-9707
+8052
+-262332
+1843
+-288330963782
+True
+Execution time: 22349 cycles
+Memory usage: 2197 reads, 2223 writes; 4420 total
+
+== Test passed 
+=== Grade for Test 65 is  1.00 with S/R as 0.56 ( S: 12461, R: 22349)
+== Running test c3b30
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+-3060
+1820
+508
+-3077
+-2425193820
+2771
+-259
+582
+117
+-572
+0
+-8
+Execution time: 4273 cycles
+Memory usage: 60 reads, 161 writes; 221 total
+
+Ref Output:
+Initializing machine with 2048 registers
+-3060
+1820
+508
+-3077
+-2425193820
+2771
+-259
+582
+117
+-572
+0
+-8
+Execution time: 9470 cycles
+Memory usage: 1175 reads, 1150 writes; 2325 total
+
+== Test passed 
+=== Grade for Test 66 is  1.00 with S/R as 0.45 ( S: 4273, R: 9470)
+== Running test c3b31
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 8370 cycles
+Memory usage: 74 reads, 162 writes; 236 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 13693 cycles
+Memory usage: 1218 reads, 1174 writes; 2392 total
+
+== Test passed 
+=== Grade for Test 67 is  1.00 with S/R as 0.61 ( S: 8370, R: 13693)
+== Running test c3b32
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1740
+-122
+110604
+88897
+77
+-2726
+-3060
+2481568
+-1268011910280960
+33178
+-9707
+8052
+-262332
+1843
+-288330963782
+True
+Execution time: 12461 cycles
+Memory usage: 122 reads, 310 writes; 432 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1740
+-122
+110604
+88897
+77
+-2726
+-3060
+2481568
+-1268011910280960
+33178
+-9707
+8052
+-262332
+1843
+-288330963782
+True
+Execution time: 22349 cycles
+Memory usage: 2197 reads, 2223 writes; 4420 total
+
+== Test passed 
+=== Grade for Test 68 is  1.00 with S/R as 0.56 ( S: 12461, R: 22349)
+== Running test c3b33
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+-3060
+1820
+508
+-3077
+-2425193820
+2771
+-259
+582
+117
+-572
+0
+-8
+Execution time: 4273 cycles
+Memory usage: 60 reads, 161 writes; 221 total
+
+Ref Output:
+Initializing machine with 2048 registers
+-3060
+1820
+508
+-3077
+-2425193820
+2771
+-259
+582
+117
+-572
+0
+-8
+Execution time: 9470 cycles
+Memory usage: 1175 reads, 1150 writes; 2325 total
+
+== Test passed 
+=== Grade for Test 69 is  1.00 with S/R as 0.45 ( S: 4273, R: 9470)
+== Running test c3b34
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+True
+Execution time: 8370 cycles
+Memory usage: 74 reads, 162 writes; 236 total
+
+Ref Output:
+Initializing machine with 2048 registers
+True
+Execution time: 13693 cycles
+Memory usage: 1218 reads, 1174 writes; 2392 total
+
+== Test passed 
+=== Grade for Test 70 is  1.00 with S/R as 0.61 ( S: 8370, R: 13693)
+== Running test c3b35
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1740
+-122
+110604
+88897
+77
+-2726
+-3060
+2481568
+-1268011910280960
+33178
+-9707
+8052
+-262332
+1843
+-288330963782
+True
+Execution time: 12461 cycles
+Memory usage: 122 reads, 310 writes; 432 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1740
+-122
+110604
+88897
+77
+-2726
+-3060
+2481568
+-1268011910280960
+33178
+-9707
+8052
+-262332
+1843
+-288330963782
+True
+Execution time: 22349 cycles
+Memory usage: 2197 reads, 2223 writes; 4420 total
+
+== Test passed 
+=== Grade for Test 71 is  1.00 with S/R as 0.56 ( S: 12461, R: 22349)
+== Running test aa10
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+515
+Execution time: 151 cycles
+Memory usage: 23 reads, 36 writes; 59 total
+
+Ref Output:
+Initializing machine with 2048 registers
+515
+Execution time: 221 cycles
+Memory usage: 43 reads, 46 writes; 89 total
+
+== Test passed 
+=== Grade for Test 72 is  1.00 with S/R as 0.68 ( S: 151, R: 221)
+== Running test aa11
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+11
+Execution time: 656 cycles
+Memory usage: 113 reads, 108 writes; 221 total
+
+Ref Output:
+Initializing machine with 2048 registers
+11
+Execution time: 1007 cycles
+Memory usage: 185 reads, 177 writes; 362 total
+
+== Test passed 
+=== Grade for Test 73 is  1.00 with S/R as 0.65 ( S: 656, R: 1007)
+== Running test aa12
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+421
+Execution time: 328 cycles
+Memory usage: 55 reads, 60 writes; 115 total
+
+Ref Output:
+Initializing machine with 2048 registers
+421
+Execution time: 426 cycles
+Memory usage: 80 reads, 76 writes; 156 total
+
+== Test passed 
+=== Grade for Test 74 is  0.97 with S/R as 0.77 ( S: 328, R: 426)
+== Running test aa20
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+150
+Execution time: 2682 cycles
+Memory usage: 463 reads, 417 writes; 880 total
+
+Ref Output:
+Initializing machine with 2048 registers
+150
+Execution time: 4488 cycles
+Memory usage: 826 reads, 777 writes; 1603 total
+
+== Test passed 
+=== Grade for Test 75 is  1.00 with S/R as 0.60 ( S: 2682, R: 4488)
+== Running test aa21
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+3628800
+Execution time: 514 cycles
+Memory usage: 81 reads, 75 writes; 156 total
+
+Ref Output:
+Initializing machine with 2048 registers
+3628800
+Execution time: 933 cycles
+Memory usage: 172 reads, 154 writes; 326 total
+
+== Test passed 
+=== Grade for Test 76 is  1.00 with S/R as 0.55 ( S: 514, R: 933)
+== Running test aa22
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+112589990684262400
+Execution time: 2632 cycles
+Memory usage: 463 reads, 417 writes; 880 total
+
+Ref Output:
+Initializing machine with 2048 registers
+112589990684262400
+Execution time: 4538 cycles
+Memory usage: 876 reads, 777 writes; 1653 total
+
+== Test passed 
+=== Grade for Test 77 is  1.00 with S/R as 0.58 ( S: 2632, R: 4538)
+== Running test aa24
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+149
+Execution time: 14593 cycles
+Memory usage: 2546 reads, 2032 writes; 4578 total
+
+Ref Output:
+Initializing machine with 2048 registers
+149
+Execution time: 43891 cycles
+Memory usage: 8522 reads, 7814 writes; 16336 total
+
+== Test passed 
+=== Grade for Test 78 is  1.00 with S/R as 0.33 ( S: 14593, R: 43891)
+== Running test aa25
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+55
+Execution time: 8604 cycles
+Memory usage: 1475 reads, 1248 writes; 2723 total
+
+Ref Output:
+Initializing machine with 2048 registers
+55
+Execution time: 19414 cycles
+Memory usage: 3691 reads, 3374 writes; 7065 total
+
+== Test passed 
+=== Grade for Test 79 is  1.00 with S/R as 0.44 ( S: 8604, R: 19414)
+== Running test aaa1
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+0
+Execution time: 164 cycles
+Memory usage: 35 reads, 27 writes; 62 total
+
+Ref Output:
+Initializing machine with 2048 registers
+0
+Execution time: 231 cycles
+Memory usage: 55 reads, 36 writes; 91 total
+
+== Test passed 
+=== Grade for Test 80 is  1.00 with S/R as 0.71 ( S: 164, R: 231)
+== Running test aaa2
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1
+Execution time: 336 cycles
+Memory usage: 47 reads, 38 writes; 85 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1
+Execution time: 467 cycles
+Memory usage: 86 reads, 56 writes; 142 total
+
+== Test passed 
+=== Grade for Test 81 is  1.00 with S/R as 0.72 ( S: 336, R: 467)
+== Running test aaa3
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1
+Execution time: 4161 cycles
+Memory usage: 709 reads, 611 writes; 1320 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1
+Execution time: 6698 cycles
+Memory usage: 1217 reads, 1118 writes; 2335 total
+
+== Test passed 
+=== Grade for Test 82 is  1.00 with S/R as 0.62 ( S: 4161, R: 6698)
+== Running test aaa4
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1
+Execution time: 41514 cycles
+Memory usage: 7086 reads, 6086 writes; 13172 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1
+Execution time: 66799 cycles
+Memory usage: 12143 reads, 11143 writes; 23286 total
+
+== Test passed 
+=== Grade for Test 83 is  1.00 with S/R as 0.62 ( S: 41514, R: 66799)
+== Running test aaa5
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1
+Execution time: 2349 cycles
+Memory usage: 401 reads, 356 writes; 757 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1
+Execution time: 3779 cycles
+Memory usage: 693 reads, 638 writes; 1331 total
+
+== Test passed 
+=== Grade for Test 84 is  1.00 with S/R as 0.62 ( S: 2349, R: 3779)
+== Running test aaa6
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+line 6:4 missing '=' at '('
+Your Output:
+Initializing machine with 2048 registers
+1
+Execution time: 4594 cycles
+Memory usage: 776 reads, 686 writes; 1462 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1
+Execution time: 7434 cycles
+Memory usage: 1356 reads, 1246 writes; 2602 total
+
+== Test passed 
+=== Grade for Test 85 is  1.00 with S/R as 0.62 ( S: 4594, R: 7434)
+== Running test aaa7
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+0
+Execution time: 167 cycles
+Memory usage: 36 reads, 27 writes; 63 total
+
+Ref Output:
+Initializing machine with 2048 registers
+0
+Execution time: 246 cycles
+Memory usage: 59 reads, 38 writes; 97 total
+
+== Test passed 
+=== Grade for Test 86 is  1.00 with S/R as 0.68 ( S: 167, R: 246)
+== Running test aaa8
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+499501
+Execution time: 13034 cycles
+Memory usage: 3006 reads, 2006 writes; 5012 total
+
+Ref Output:
+Initializing machine with 2048 registers
+499501
+Execution time: 15074 cycles
+Memory usage: 4014 reads, 2014 writes; 6028 total
+
+== Test passed 
+=== Grade for Test 87 is  0.82 with S/R as 0.86 ( S: 13034, R: 15074)
+== Running test aaa9
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+499501
+Execution time: 36034 cycles
+Memory usage: 6006 reads, 2006 writes; 8012 total
+
+Ref Output:
+Initializing machine with 2048 registers
+499501
+Execution time: 39149 cycles
+Memory usage: 8029 reads, 2029 writes; 10058 total
+
+== Test passed 
+=== Grade for Test 88 is  0.73 with S/R as 0.92 ( S: 36034, R: 39149)
+== Running test aaa10
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+11
+Execution time: 742 cycles
+Memory usage: 135 reads, 77 writes; 212 total
+
+Ref Output:
+Initializing machine with 2048 registers
+11
+Execution time: 3949 cycles
+Memory usage: 737 reads, 607 writes; 1344 total
+
+== Test passed 
+=== Grade for Test 89 is  1.00 with S/R as 0.19 ( S: 742, R: 3949)
+== Running test aaa11
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+20
+Execution time: 5746 cycles
+Memory usage: 980 reads, 817 writes; 1797 total
+
+Ref Output:
+Initializing machine with 2048 registers
+20
+Execution time: 9155 cycles
+Memory usage: 1679 reads, 1494 writes; 3173 total
+
+== Test passed 
+=== Grade for Test 90 is  1.00 with S/R as 0.63 ( S: 5746, R: 9155)
+== Running test aa1
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+1853020188851841
+Execution time: 340 cycles
+Memory usage: 57 reads, 55 writes; 112 total
+
+Ref Output:
+Initializing machine with 2048 registers
+1853020188851841
+Execution time: 581 cycles
+Memory usage: 110 reads, 100 writes; 210 total
+
+== Test passed 
+=== Grade for Test 91 is  1.00 with S/R as 0.59 ( S: 340, R: 581)
+== Running test aa2
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+48828125
+Execution time: 605 cycles
+Memory usage: 102 reads, 95 writes; 197 total
+
+Ref Output:
+Initializing machine with 2048 registers
+48828125
+Execution time: 1031 cycles
+Memory usage: 195 reads, 175 writes; 370 total
+
+== Test passed 
+=== Grade for Test 92 is  1.00 with S/R as 0.59 ( S: 605, R: 1031)
+== Running test aa3
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+355687428096000
+Execution time: 763 cycles
+Memory usage: 121 reads, 107 writes; 228 total
+
+Ref Output:
+Initializing machine with 2048 registers
+355687428096000
+Execution time: 1406 cycles
+Memory usage: 261 reads, 228 writes; 489 total
+
+== Test passed 
+=== Grade for Test 93 is  1.00 with S/R as 0.54 ( S: 763, R: 1406)
+== Running test ab1
+Running compiler...
+Simulating reference asm code to get reference output...
+Reference return code: 0
+Simulating compiler generated asm code to get output...
+Diffing output...
+Your Output:
+Initializing machine with 2048 registers
+225
+Execution time: 929 cycles
+Memory usage: 205 reads, 105 writes; 310 total
+
+Ref Output:
+Initializing machine with 2048 registers
+225
+Execution time: 961 cycles
+Memory usage: 212 reads, 111 writes; 323 total
+
+== Test passed 
+=== Grade for Test 94 is  0.65 with S/R as 0.97 ( S: 929, R: 961)
+
+Test passed: 92/94
+Final grade: 93
