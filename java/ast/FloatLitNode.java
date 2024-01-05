@@ -12,7 +12,7 @@ public class FloatLitNode extends ExpressionNode {
 	
 	public FloatLitNode(String val) {
 		setVal(val);
-		setType(new Scope.Type(Scope.InnerType.FLOAT));
+		setType(Scope.Type.FLOAT);
 	}
 
 	@Override

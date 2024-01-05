@@ -4,15 +4,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 import ast.ASTNode;
-import ast.AddrOfNode;
 import ast.AssignNode;
 import ast.BinaryOpNode;
 import ast.CallNode;
 import ast.IfStatementNode;
 import ast.WhileNode;
 import ast.IntLitNode;
-import ast.MallocNode;
-import ast.PtrDerefNode;
 import ast.ReadNode;
 import ast.ReturnNode;
 import ast.StatementListNode;
@@ -25,8 +22,6 @@ import ast.ExpressionNode;
 import ast.FunctionListNode;
 import ast.FunctionNode;
 import ast.FloatLitNode;
-import ast.FreeNode;
-import ast.TypeCastNode;
 
 /**
  * Abstract visitor class that implements the visitor pattern over the AST
@@ -73,13 +68,6 @@ public abstract class AbstractASTVisitor<R> implements ASTVisitor<R> {
 	public R visit(FloatLitNode node) {
 		preprocess(node);
 		return postprocess(node);
-	}
-
-	@Override
-	public R visit(TypeCastNode node) {
-		preprocess(node);
-		R expr = node.getExpr().accept(this);
-		return postprocess(node, expr);
 	}
 
 	@Override
@@ -161,10 +149,7 @@ public abstract class AbstractASTVisitor<R> implements ASTVisitor<R> {
 	@Override
 	public R visit(ReturnNode node) {
 		preprocess(node);
-		R retExpr = null;
-		if (node.getRetExpr() != null) {
-			retExpr = node.getRetExpr().accept(this);
-		}
+		R retExpr = node.getRetExpr().accept(this);
 		return postprocess(node, retExpr);
 	}
 
@@ -197,38 +182,6 @@ public abstract class AbstractASTVisitor<R> implements ASTVisitor<R> {
 		return retval;
 	}
 
-	@Override
-	public R visit(PtrDerefNode node) {
-		preprocess(node);
-		R expr = node.getExpr().accept(this);
-		R retval = postprocess(node, expr);
-		return retval;
-	}
-
-	@Override
-	public R visit(AddrOfNode node) {
-		preprocess(node);
-		R expr = node.getExpr().accept(this);
-		R retval = postprocess(node, expr);
-		return retval;
-	}
-
-	@Override
-	public R visit(MallocNode node) {
-		preprocess(node);
-		R arg = node.getArg().accept(this);
-		R retval = postprocess(node, arg);
-		return retval;
-	}
-
-	@Override
-	public R visit(FreeNode node) {
-		preprocess(node);
-		R arg = node.getArg().accept(this);
-		R retval = postprocess(node, arg);
-		return retval;
-	}
-
 	protected R postprocess(VarNode node) {
 		return null;
 	}
@@ -238,10 +191,6 @@ public abstract class AbstractASTVisitor<R> implements ASTVisitor<R> {
 	}
 
 	protected R postprocess(FloatLitNode node) {
-		return null;
-	}
-
-	protected R postprocess(TypeCastNode node, R expr) {
 		return null;
 	}
 
@@ -297,22 +246,6 @@ public abstract class AbstractASTVisitor<R> implements ASTVisitor<R> {
 		return null;
 	}
 
-	protected R postprocess(PtrDerefNode node, R expr) {
-		return null;
-	}
-
-	protected R postprocess(AddrOfNode node, R expr) {
-		return null;
-	}
-
-	protected R postprocess(MallocNode node, R arg) {
-		return null;
-	}
-
-	protected R postprocess(FreeNode node, R arg) {
-		return null;
-	}
-
 	protected void preprocess(VarNode node) {
 		return;
 	}
@@ -322,10 +255,6 @@ public abstract class AbstractASTVisitor<R> implements ASTVisitor<R> {
 	}
 
 	protected void preprocess(FloatLitNode node) {
-		return;
-	}
-
-	protected void preprocess(TypeCastNode node) {
 		return;
 	}
 
@@ -378,22 +307,6 @@ public abstract class AbstractASTVisitor<R> implements ASTVisitor<R> {
 	}
 
 	protected void preprocess(CallNode node) {
-		return;
-	}
-
-	protected void preprocess(PtrDerefNode node) {
-		return;
-	}
-
-	protected void preprocess(AddrOfNode node) {
-		return;
-	}
-	
-	protected void preprocess(MallocNode node) {
-		return;
-	}
-
-	protected void preprocess(FreeNode node) {
 		return;
 	}
 

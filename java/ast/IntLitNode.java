@@ -12,7 +12,7 @@ public class IntLitNode extends ExpressionNode {
 	
 	public IntLitNode(String val) {
 		setVal(val);
-		setType(new Scope.Type(Scope.InnerType.INT));
+		setType(Scope.Type.INT);
 	}
 
 	@Override

@@ -3,15 +3,12 @@ package ast.visitor;
 import java.util.List;
 
 import ast.ASTNode;
-import ast.AddrOfNode;
 import ast.AssignNode;
 import ast.BinaryOpNode;
 import ast.CallNode;
 import ast.WhileNode;
 import ast.IfStatementNode;
 import ast.IntLitNode;
-import ast.MallocNode;
-import ast.PtrDerefNode;
 import ast.ReadNode;
 import ast.StatementListNode;
 import ast.VarNode;
@@ -20,7 +17,6 @@ import ast.ReturnNode;
 import ast.CondNode;
 import ast.FunctionNode;
 import ast.FloatLitNode;
-import ast.FreeNode;
 
 public class PrintVisitor extends AbstractASTVisitor<Void> {
 
@@ -197,58 +193,6 @@ public class PrintVisitor extends AbstractASTVisitor<Void> {
 
 	@Override
 	protected Void postprocess(CallNode node, List<Void> args) {
-		--depth;
-		return null;
-	}
-
-	@Override
-	protected void preprocess(PtrDerefNode node) {
-		printTabs();
-		System.out.println("PtrDeref: ");
-		depth++;
-	}
-
-	@Override
-	protected Void postprocess(PtrDerefNode node, Void expr) {
-		--depth;
-		return null;
-	}
-
-	@Override
-	protected void preprocess(AddrOfNode node) {
-		printTabs();
-		System.out.println("AddrOf: ");
-		depth++;
-	}
-
-	@Override
-	protected Void postprocess(AddrOfNode node, Void expr) {
-		--depth;
-		return null;
-	}
-
-	@Override
-	protected void preprocess(MallocNode node) {
-		printTabs();
-		System.out.println("Malloc: ");
-		depth++;
-	}
-
-	@Override
-	protected Void postprocess(MallocNode node, Void expr) {
-		--depth;
-		return null;
-	}
-
-	@Override
-	protected void preprocess(FreeNode node) {
-		printTabs();
-		System.out.println("Malloc: ");
-		depth++;
-	}
-
-	@Override
-	protected Void postprocess(FreeNode node, Void expr) {
 		--depth;
 		return null;
 	}
